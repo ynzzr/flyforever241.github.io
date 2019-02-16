@@ -5,7 +5,7 @@
     <link href="/favicon.ico" rel="shortcut icon">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
-    <title>首页 - dblark's blog</title>
+    <title>运算符重载 - dblark's blog</title>
 
 
     <link href="/css/base.min.css" rel="stylesheet">
@@ -57,7 +57,7 @@
 	 <nav class="menu menu-left nav-drawer nav-drawer-md" id="ui_menu">
 		 <div class="menu-scroll">
 			 <div class="menu-content">
-				 <a class="menu-logo" href="/">周鸿楷的博客</a>
+				 <a class="menu-logo" href="/">周圣杰的博客</a>
 				 <ul class="nav">
 					 <li>
 
@@ -65,62 +65,29 @@
 						 <ul class="menu-collapse collapse in" id="notes">
 
 							 <li>
-								 <a class="waves-attach waves-effect" href="#">线段树</a>
+								 <a class="waves-attach" href="/notes/ST.html">浅析ST表</a>
 							 </li>
 							 <li>
-								 <a class="waves-attach waves-effect" href="#">行列式及矩阵</a>
+								 <a class="waves-attach" href="/notes/FFT.html">FFT详解</a>
 							 </li>
-							
+
 						 </ul>
-<a class="collapsed waves-attach waves-effect" data-toggle="collapse" href="#problems">题目列表</a>
-<ul class="menu-collapse collapse in" id="problems">
-<li>
-								 <a class="waves-attach waves-effect" href="#">各大OJ上的题目</a>
+						 <a class="collapsed waves-attach waves-effect" data-toggle="collapse" href="#pascal">Pascal语法</a>
+						 <ul class="menu-collapse collapse in" id="pascal">
+
+							 <li class="active">
+								 <a class="waves-attach" href="/pascal/operator.html">运算符重载</a>
 							 </li>
-							 <li>
-								 <a class="waves-attach waves-effect" href="#">私人题目</a>
-							 </li>
-</ul>
-		 <a class="collapsed waves-attach waves-effect" data-toggle="collapse" href="#travels">游记</a>
+
+						 </ul>
+						 <a class="collapsed waves-attach waves-effect" data-toggle="collapse" href="#travels">游记</a>
 						 <ul class="menu-collapse collapse in" id="travels">
 
 							 <li>
-								 <a class="waves-attach waves-effect" href="./NOIP2018.html">NOIP2018普及组游记</a>
+								 <a class="waves-attach" href="/travels/NOIP2018.html">NOIP2018普及组游记</a>
 							 </li>
 
-					 
-
-				 </ul>
-						 <a class="collapsed waves-attach waves-effect" data-toggle="collapse" href="#talks">评论</a>
-<ul class="menu-collapse collapse in" id="talks">
-<li>
-								 <a class="waves-attach waves-effect" href="/talk.html">评论专区</a>
-							 </li>
-			 </ul>
-<a class="collapsed waves-attach waves-effect" data-toggle="collapse" href="#games">娱乐</a>
-<ul class="menu-collapse collapse in" id="games">
-<li>
-								 <a class="waves-attach waves-effect" href="/test13.html">八卦十三班</a>
-							 </li>
-			 </ul>
-<a class="collapsed waves-attach waves-effect" data-toggle="collapse" href="#sciences">科学</a>
-<ul class="menu-collapse collapse in" id="sciences">
-<li>
-								 <a class="waves-attach waves-effect" href="/extraterrestrialcivilization.html">探索地外文明</a>
-							 </li>
-</ul>
-<a class="collapsed waves-attach waves-effect" data-toggle="collapse" href="#anothers">分站</a>
-<ul class="menu-collapse collapse in" id="anothers">
-<li>
-								 <a class="waves-attach waves-effect" href="/OJ.html">OJ分站</a>
-							 </li>
-<li>
-								 <a class="waves-attach waves-effect" href="/web.html">常用网站分站</a>
-							 </li>
-<li>
-								 <a class="waves-attach waves-effect" href="/news.html">新闻分站</a>
-							 </li>
-</ul>
+					 </li>
 
 				 </ul>
 			 </div>
@@ -136,7 +103,7 @@
             </li>
         </ul>
         <span class="header-logo header-affix visible-md-block visible-lg-block margin-right-no" data-offset-top="0" data-spy="affix">
-            <p class="pagetitle">首页</p>
+            <p class="pagetitle">运算符重载</p>
         </span>
 
         <ul class="nav nav-list pull-right">
@@ -154,21 +121,45 @@
                     <section class="content-inner margin-top-no">
                         <br>
 
-<h1>周鸿楷的博客</h1>
-<p>我是zhouhongkai，这里是我的博客。<strong>文章在左边。</strong></p>
-<p>主要写自己学习的算法，以及一些基本的东西。</p>
-<p>祝大家新年快乐！</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode pascal"><code class="sourceCode pascal"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">begin</span></a>
-<a class="sourceLine" id="cb1-2" title="2">writeln(<span class="st">&#39;Goodbye 2018&#39;</span>);</a>
-<a class="sourceLine" id="cb1-3" title="3">writeln(<span class="st">&#39;Hello 2019&#39;</span>);</a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="kw">end</span>.</a></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="pp">#include</span><span class="im">&lt;iostream&gt;</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="kw">using</span> <span class="kw">namespace</span> std;</a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="dt">int</span> main()</a>
-<a class="sourceLine" id="cb2-4" title="4">{</a>
-<a class="sourceLine" id="cb2-5" title="5">  cout&lt;&lt;<span class="st">&quot;Goodbye 2018&quot;</span>&lt;&lt;endl&lt;&lt;<span class="st">&quot;Hello 2019&quot;</span>&lt;&lt;endl;</a>
-<a class="sourceLine" id="cb2-6" title="6">  <span class="cf">return</span> <span class="dv">0</span>;</a>
-<a class="sourceLine" id="cb2-7" title="7">}</a></code></pre></div>
+<h1>运算符重载</h1>
+<p>运算符重载非常有用。有了它，代码能变的非常简洁。特别是针对高精度库之类的。</p>
+<p>Pascal的标准语法中是没有运算符重载的，不过，这个功能几乎在所有版本的编辑器里都有。</p>
+<p>我们来看看格式：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode pascal"><code class="sourceCode pascal"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">operator</span> 运算符(参与运算的变量们)储存运算结果的变量;</a></code></pre></div>
+<p>举个例子：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode pascal"><code class="sourceCode pascal"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">operator</span> +(a,b:matrix)c:matrix;</a></code></pre></div>
+<p>重载后，就可以像平常一样正常的使用加法了！</p>
+<p>但是，运算符重载有特殊的情况。在某些情况下，它们的功能有一些扩展。</p>
+<table>
+<thead>
+<tr class="header">
+<th>重载的运算符</th>
+<th>其他作用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>:=</td>
+<td>将变量进行隐式转换</td>
+</tr>
+<tr class="even">
+<td>=</td>
+<td>同时重载&lt;&gt;</td>
+</tr>
+<tr class="odd">
+<td>&lt;</td>
+<td>同时重载&gt;=</td>
+</tr>
+<tr class="even">
+<td>&gt;</td>
+<td>同时重载&lt;=</td>
+</tr>
+</tbody>
+</table>
+<p>所以，= &lt; &gt; &lt;&gt; &gt;= &lt;=中，只需重载3个就够了。</p>
+<p><del>吐槽：Pascal的输入输出……</del></p>
+<p>不过，Pascal中的输入输出不像C中的<code>cin</code>和<code>cout</code>用运算符传值，是过程。</p>
+<p>如果你想重载输入输出，那就干脆把整个编译器源码给改了吧。</p>
 
                     </section>
                 </div>
@@ -194,9 +185,9 @@
             var gitalk = new Gitalk({
               clientID: '8fa4b6551a4d0d6a0d68',
               clientSecret: '829f1d6cc0a2247ae3f33a1744337464d26e65a4',
-              repo: 'zhouhongkai06.gituhb.io',
-              owner: 'zhouhongkai',
-              admin: ['zhouhongkai'],
+              repo: 'zhoushengjie.pw',
+              owner: 'dblark',
+              admin: ['dblark'],
               id: location.pathname,
               distractionFreeMode: false
             })
