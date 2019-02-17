@@ -188,20 +188,30 @@
                 </div>
             </div>
 
-           <div id="gitalk-container"></div>
-            <script src="/js/gitalk.min.js"></script>
-            <script>
-            var gitalk = new Gitalk({
-              clientID: 'acb28a48a90a4bd98b88',
-              clientSecret: '81d7b49783b86f77d3dd764eced24a1bbead4f38',
-              repo: 'zhouhongkai06',
-              owner: 'zhouhongkai06',
-              admin: ['zhouhongkai06'],
-              id: location.pathname,
-              distractionFreeMode: false
-            })
-            gitalk.render('gitalk-container')
-            </script>
+           username = "zhouhongkai06" # GitHub 用户名
+new_token = "09a243465e5d0bc8f5435f91eaf97a7da629908c"  # GitHub Token
+repo_name = "github-comments-repo" # 存放 issues
+kind = "Gitalk" # "Gitalk" or "gitment"
+urls = ["zhouhongkai06"]
+
+require 'open-uri'
+require 'faraday'
+require 'active_support'
+require 'active_support/core_ext'
+
+conn = Faraday.new(:url => "https://api.github.com/repos/#{username}/#{repo_name}/issues") do |conn|
+  conn.basic_auth(username, token)
+  conn.adapter  Faraday.default_adapter
+end
+
+urls.each_with_index do |url, index|
+  title = open(url).read.scan(/<title>(.*?)<\/title>/).first.first.force_encoding('UTF-8')
+  response = conn.post do |req|
+    req.body = { body: url, labels: [kind, url], title: title }.to_json
+  end
+  puts response.body
+  sleep 15 if index % 20 == 0
+end
 
     </main>
 
